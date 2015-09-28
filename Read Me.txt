@@ -1,0 +1,59 @@
+The program has multiple .java files in the project namespace that are required for proper execution of the program. 
+
+There are two parts for this program : 
+1. Reading the training file and generating the language model files.
+2. Reading the test file and language model file (generated in the previous step) and computing the accuracies.
+ 
+
+
+To perform the first step, you need to run Train.java. <this is the main .java file for this step>
+
+Tested on both windows cmd prompt & university linux servers:
+
+Step 1 : > javac  *.java
+Step 2 : > java Train -train <Training_Folder> -cfv <Cross_Fold>              
+
+Expected Input  : \NaiveBayesClassifier > java Train -train txt_sentoken -cfv 10
+
+Expected output : \NaiveBayesClassifier > Model file generated in 5205 milli-seconds at D:\WorkSpace\KeplerWS\NaiveBayesClassifier
+
+The program takes 4 arguments -
+First Argument  : just type -train 
+Second Argument : type the name of the training folder. (this folder should be placed inside the project folder) 
+Third Argument  : just type - cfv
+Fourth Argument : cvf - cross fold validation. For our program implementation we input 10.
+
+Any number of arguments less or more than 4 will cause the program to exit.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+To perform the second step, you need to run Evaluate.java. <this is the main .java file for this step>
+
+Tested on both windows cmd prompt & university linux servers:
+
+Step 1 : > javac  *.java
+Step 2 : > java Evaluate -test <Test_Folder> -cfv <Cross_Fold>
+
+Expected Input  : \NaiveBayesClassifier > java Evaluate -test txt_sentoken -cfv 10
+
+Expected output : \NaiveBayesClassifier > Average : 80.3 Average computed in 1469 milli-seconds
+
+The program takes 4 arguments -
+First Argument  : just type -test
+Second Argument : type the name of the test folder. (this folder should be placed inside the project folder) 
+Third Argument  : just type - cfv
+Fourth Argument : cvf - cross fold validation. For our program implementation we input 10.
+
+
+Any number of arguments less or more than 4 will cause the program to exit.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+<pathinfo> - The path is already feed in the program. It takes these files from the Project folder. 
+If you want to test the program on new files other than the onces given to us, please drop these files in the project folder and pass only the name of the folder as an argument to the program.
+The model file (model0.txt, model1.txt,...) is also generated in the same Project Folder.
+
+
+
+
